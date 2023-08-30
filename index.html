@@ -1,32 +1,292 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="js/scripts.js"></script>
-
+<style>
+  body {
+    background: linear-gradient(to bottom, #0074D9, #FFD700);
+    /* For older browsers */
+    background: -webkit-linear-gradient(top, #0074D9, #FFD700);
+    background: -moz-linear-gradient(top, #0074D9, #FFD700);
+    background: -o-linear-gradient(top, #0074D9, #FFD700);
+  }
+</style>
 </head>
 <body>
    <h1>Python Programs</h1>
    <div class="question">
-      <h2>Program 1</h2>
-      <pre><code class="python">Question code goes here</code></pre>
+      <h2>Check Wheteher Prime or Not</h2>
+<h2 style="border:2px solid Tomato;">
+      <pre><code class="python">def test_prime():
+    n = int(input("Enter the number: "))
+    if n == 1:
+        return False
+    elif n == 2:
+        return True
+    else:
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+        return True
+
+print(test_prime())
+
+</code></pre>
+</h2>
+ <button class="copy-button">Copy</button>
    </div>
-   <div class="answer">
-      <h3>Solution 1</h3>
-      <pre><code class="python">Answer code goes here</code></pre>
-      <button class="copy-button">Copy</button>
-   </div>
+   
 
     <div class="answer">
-      <h3>Solution 1</h3>
+      <h3>To greet all the people 
+given in tuple.</h3>
+<h2 style="border:2px solid Tomato;">
       <pre><code class="python">def greet_people(people_tuple):
     for person in people_tuple:
         print(f"good morning,{person}!")
 
 people = ("Atharva", "Daniel", "Yash", "Aayush")
 greet_people(people)
-      </code></pre>
+      </code></pre> </h2>
       <button class="copy-button">Copy</button>
    </div>
+
+
+
+
+<div class="code-container">
+    <h2>to Find the power of a number 
+using recursion</h2>
+    <h2 style="border:2px solid Tomato;">
+<pre><code>def power(base, exponent):
+    if exponent == 0:
+        return 1
+    else:
+        return base * power(base, exponent - 1)
+
+base = float(input("Enter the base: "))
+exponent = int(input("Enter the exponent: "))
+result = power(base, exponent)
+print(f"{base} raised to the power of {exponent} is {result}")
+</h2>
+    </code></pre>
+    <button class="copy-button">Copy</button>
+  </div>
+
+
+
+<div class="code-container">
+    <h2>Using lambda with 
+map function to change the list to uppercase.</h2>
+<h2 style="border:2px solid Tomato;">
+    <pre><code>colors = ["red", "green", "blue", "black"]
+
+upper_colors = list(map(lambda x: x.upper(), colors))
+
+print(upper_colors)
+    </code></pre>
+</h2>
+    <button class="copy-button">Copy</button>
+  </div>
+
+
+
+<div class="code-container">
+    <h2>Using a lambda function with 
+reduce function to compute maximum element 
+from list.</h2>
+<h2 style="border:2px solid Tomato;">
+    <pre><code>from functools import reduce
+
+numbers = [10, 5, 20, 15, 30]
+
+max_number = reduce(lambda x, y: x if x > y else y, numbers)
+
+print(f"The maximum number is: {max_number}")
+</h2>
+    </code></pre>
+    <button class="copy-button">Copy</button>
+  </div></h2>
+
+
+
+
+
+<div class="code-container">
+    <h2>Find factorial using 
+recursion.</h2>
+<h2 style="border:2px solid Tomato;">
+    <pre><code>def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = int(input("Enter a number: "))
+result = factorial(num)
+print(f"The factorial of {num} is {result}")
+</h2>
+    </code></pre>
+    <button class="copy-button">Copy</button>
+  </div></h2>
+
+
+
+
+<div class="code-container">
+    <h2>Display the 
+Fibonacci sequence.
+</h2>
+<h2 style="border:2px solid Tomato;">
+    <pre><code>def fibonacci(n):
+    fib_sequence = [0, 1]
+    for i in range(2, n):
+        next_fib = fib_sequence[-1] + fib_sequence[-2]
+        fib_sequence.append(next_fib)
+    return fib_sequence
+
+num_terms = int(input("Enter the number of terms: "))
+fibonacci_sequence = fibonacci(num_terms)
+print("Fibonacci Sequence:")
+print(fibonacci_sequence)
+</h2>
+    </code></pre>
+    <button class="copy-button">Copy</button>
+  </div>
+
+
+
+
+
+
+<div class="code-container">
+    <h2>Get execution time of a 
+python method in seconds.
+</h2>
+<h2 style="border:2px solid Tomato;">
+    <pre><code>import time
+
+def sum_of_n_number(n):
+    start_time = time.time()
+    s = 0
+    for i in range(1, n + 1):
+        s = s + i
+    end_time = time.time()
+    return s, end_time - start_time
+
+n = 10
+result, execution_time = sum_of_n_number(n)
+print(f"Sum of numbers from 1 to {n} is {result}")
+print(f"Time taken to calculate: {execution_time:.6f} seconds")
+</h2>
+    </code></pre>
+    <button class="copy-button">Copy</button>
+  </div>
+
+
+
+
+
+<div class="code-container">
+    <h2>Count the 
+occurrences of each word in the given 
+sentences.</h2>
+<h2 style="border:2px solid Tomato;">
+    <pre><code>def wordcount(str):
+    counts = dict()
+    words = str.split()
+    for i in words:
+        if i in counts:
+            counts[i] += 1
+        else:
+            counts[i] = 1
+    return counts
+
+print(wordcount('growth through excellence'))
+</h2>
+    </code></pre>
+    <button class="copy-button">Copy</button>
+  </div>
+
+
+
+<div class="code-container">
+    <h2>Check whether an 
+alphabet is a rowel or consonant.
+</h2>
+<h2 style="border:2px solid Tomato;">
+    <pre><code>input_string = input("Input a Letter of the Alphabet: ")
+
+for letter in input_string:
+    if letter.lower() in ('a', 'e', 'i', 'o', 'u'):
+        print("%s is a vowel." % letter)
+    elif letter.lower() == 'y':
+        print("Sometimes letter y stands for vowel, sometimes stands for consonant.")
+    else:
+        print("%s is a consonant." % letter)
+    </code></pre>
+    <button class="copy-button">Copy</button>
+  </div>
+
+
+
+
+
+<div class="code-container">
+    <h2>To get the size of an 
+object in bytes.</h2>
+<h2 style="border:2px solid Tomato;">
+    <pre><code>import sys
+
+str1 = 'suvarna'
+str2 = 'pansambal'
+
+print("Memory size of '" + str1 + "' = " + str(sys.getsizeof(str1)) + " bytes")
+print("Memory size of '" + str2 + "' = " + str(sys.getsizeof(str2)) + " bytes")
+</h2>
+    </code></pre>
+    <button class="copy-button">Copy</button>
+  </div>
+
+
+
+
+
+<div class="code-container">
+    <h2>Displays those inputs back in upper 
+case and lower cases.</h2>
+
+<h2 style="border:2px solid Tomato;">
+
+    <pre><code>text = input("which is your favorite colour?")
+print("My favorite colour is",text.upper())
+print("My favorite colour is",text.lower())
+    
+</h2></code></pre>
+    <button class="copy-button">Copy</button>
+  </div>
+
+
+
+<div class="code-container">
+    <h2>To reverse a string if 
+its length is multiple of 4.</h2>
+<h2 style="border:2px solid Tomato;">
+
+
+    <pre><code>def reverse(str1):
+    if len(str1) % 4 == 0:
+        return ''.join(reversed(str1))
+    return str1
+
+print(reverse('notification'))
+print(reverse('intrduction'))
+    
+</h2>
+</code></pre>
+    <button class="copy-button">Copy</button>
+  </div>
+
+
    <!-- More questions and answers -->
 </body>
 </html>
